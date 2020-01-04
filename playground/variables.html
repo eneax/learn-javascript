@@ -11,6 +11,11 @@
       var first = "enea"; // variable declaration statement
       let age = 100;
       const cool = true;
+
+      first = "ENEA";
+      age = 17;
+      // cool = false; --> Uncaught TypeError: Assignment to constant variable.
+
       console.log(first, age, cool); // function call statement
     </script>
   </body>
@@ -22,6 +27,11 @@
 ! 1. var
 ! 2. let
 ! 3. const
+
+* Main differences
+- Once you declare a variable with var and let, you can update it (there is no need to re-declare them)
+- If you declare a variable with const, you cannot update it.
+- const is very useful for declaring constants (stuff that will never change), like an API key
 -->
 
 <!-- 
