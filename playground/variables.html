@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      "use strict";
       var first = "enea"; // variable declaration statement
       let age = 100;
       const cool = true;
@@ -16,7 +17,10 @@
       age = 17;
       // cool = false; --> Uncaught TypeError: Assignment to constant variable.
 
-      console.log(first, age, cool); // function call statement
+      var dog;
+      dog = "Rex"; // Uncaught ReferenceError: dog is not defined --> Fix it adding 'var'
+
+      console.log(first, age, cool, dog); // function call statement
     </script>
   </body>
 </html>
@@ -57,4 +61,13 @@ if (age > 18) {
 then there is no need for a semicolon, since you are not telling the computer to do something.
 You are just running some code and the instructions will be contained inside the code block.
 
+* Strict Mode -> 'use strict';
+It's a new mode that has been introduced to the browser for backward compatibility reasons.
+
+When JavaScript was first introduced, it was possible to declare a variable without using 'var'.
+The browser, then, would add 'var' for you. 
+These practices, however, could lead to a lot of bugs down the road. 
+So the strict mode was introduced, as a way to patch bad JS code wrote in the past, without actually breaking those apps. 
+
+Strict mode is enforced by default when using JavaScript modules.
 -->
