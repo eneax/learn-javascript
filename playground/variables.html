@@ -36,6 +36,8 @@
 - Once you declare a variable with var and let, you can update it (there is no need to re-declare them)
 - If you declare a variable with const, you cannot update it.
 - const is very useful for declaring constants (stuff that will never change), like an API key
+- var -> function scoped variables
+- let and const -> block scoped variables
 -->
 
 <!-- 
@@ -47,9 +49,13 @@ Any time you want to do something in JS, that is referred to as a `statement`.
 
 This line represents a `statement` -> var first = "enea";
 
+
+
 * Semicolon
 As you can see, it ends with a semicolon.
 The semicolon is needed to terminate a line in JavaScript.
+
+
 
 * Semicolon and code blocks
 However, if we have a code block (things bound by curly brackets): 
@@ -61,6 +67,8 @@ if (age > 18) {
 then there is no need for a semicolon, since you are not telling the computer to do something.
 You are just running some code and the instructions will be contained inside the code block.
 
+
+
 * Strict Mode -> 'use strict';
 It's a new mode that has been introduced to the browser for backward compatibility reasons.
 
@@ -70,4 +78,12 @@ These practices, however, could lead to a lot of bugs down the road.
 So the strict mode was introduced, as a way to patch bad JS code wrote in the past, without actually breaking those apps. 
 
 Strict mode is enforced by default when using JavaScript modules.
+
+
+
+* Scoping
+It answers the question: "Where are my variables available to me?"
+
+- function scoped variables -> only available inside the parent function
+- block scoped variables    -> only available inside the {}
 -->
