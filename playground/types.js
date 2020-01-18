@@ -1,4 +1,5 @@
 /* eslint-disable */
+// * Part 1 - Intro to Strings
 const name = 'Enea';
 const middle = "X";
 const last = `Xharja`;
@@ -25,4 +26,39 @@ However, even combining the single and double quotes,
 strings can get unreadable.
 We can avoid all these issues mentioned above, by simply using backticks (``)
 
+*/ 
+
+
+
+// * Part 2 - Strings on multiple lines
+const song = "It's
+
+Xmas
+
+Time
+";
+
+const song2 = `It's
+
+Xmas
+
+Time
+`;
+
+const html = `
+  <div>
+    <h2>JSX</h2>
+  </div>
+`
+
+
+
+/*
+The song variable will generate the following error -> Uncaught SyntaxError: Unexpected identifier
+
+It can be fixed: 
+- by adding a backslash at the end of every line
+- or simply using backticks (``)
+
+Backticks, indeed, are an ideal solution when you have to use HTML in your JS
 */ 
