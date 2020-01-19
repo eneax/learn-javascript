@@ -25,7 +25,6 @@ You can fix the 'Uncaught SyntaxError: Unexpected identifier' error in two ways:
 However, even combining the single and double quotes,
 strings can get unreadable.
 We can avoid all these issues mentioned above, by simply using backticks (``)
-
 */ 
 
 
@@ -62,3 +61,20 @@ It can be fixed:
 
 Backticks, indeed, are an ideal solution when you have to use HTML in your JS
 */ 
+
+
+
+/*
+* Part 3 - String concatenation and interpolation
+  Concatenation --> two or more string are combined into one
+  Interpolation --> when you put a variable inside a string
+*/ 
+const hello = 'Hello, my name is ' + name + '. Nice to meet you!';
+
+// overwrite the variable 'hello2' every single line
+let hello2 = "Hello, my name is ";
+hello2 = hello2 + name;
+hello2 = hello2 + '. Nice to meet you!';
+
+const hello3 = `Hello, my name is ${name}. Nice to meet you! I'm ${2020 - 1992} years old`;
+
