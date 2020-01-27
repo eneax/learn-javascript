@@ -19,7 +19,8 @@ Basically strings are used to hold text.
 
 ## Numbers
 
-It can be numbers that have or do not have decimal in them.
+There is only one type of number in JavaScript and it's `Number`.
+It includes numbers that have or do not have decimal in them.
 
 ## Object
 
