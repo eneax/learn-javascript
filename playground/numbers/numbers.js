@@ -12,3 +12,11 @@ typeOf age // "number"
 typeOf name // "string"
 ```
 */
+
+/*
+ * Integer vs Floats
+
+- an integer is a whole number, like 27
+- a float is a number with decimals, like 37.5
+
+ */
