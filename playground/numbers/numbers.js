@@ -37,3 +37,15 @@ console.log('a + b =', a + b); // 30
 console.log('a - b =', a - b); // 10
 console.log('a * b =', a * b); // 200
 console.log('a / b =', a / b); // 2
+
+/*
+ * Be aware of mixing types
+
+If you have a number 1 and trying to do math with a string type, let's say "1";
+then things get complicated.
+*/
+
+const numberType = 1;
+const stringType = '1';
+
+console.log(numberType + stringType); // "11" string
