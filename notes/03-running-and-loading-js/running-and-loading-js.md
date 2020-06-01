@@ -1,22 +1,23 @@
 # How to run and load JS
 
-1. script tag
+**The `script` tag**
 
-- The script tag allows us to write JavaScript inside an HTML file
-- In order for the script tag to select an element on the page, the element itself must be on the page
-- Always remember to add the script tag just before the closing body tag
+The script tag allows us to write JavaScript inside an HTML file.
+In order for the script tag to select an element on the page, the element itself must be on the page.
+Always remember to add the script tag just before the closing body tag, otherwise the script will look for code that is not on the page yet.
 
-2. import a `.js` file
+**Import a `.js` file**
 
-- Use a script tag for a source attribute with a relative path, in order to import a new JavaScript file
+Use a script tag for a source attribute with a relative path, in order to import a new JavaScript file.
 
-3. run JS in node.js
+**Run JS in `node.js`**:
 
-- Node.js is JavaScript that can run in the server, instead of making it run in the context of a website
-  - Open your terminal and type `node`. To exit, press `^C`.
-  - Or, from the terminal, navigate to a folder containing a `.js` file and type `node example.js` to run whatever code contained inside `example.js` file. When it will finish executing, it will exit automatically
+Node.js is JavaScript that can run in the server, instead of making it run in the context of a website:
 
-* Things to keep in mind
+- open your terminal and type `node`. To exit, press `^C`;
+- or, from the terminal, navigate to a folder containing a `.js` file and type `node example.js` to run whatever code contained inside `example.js` file. When it will finish executing, it will exit automatically.
+
+## Things to keep in mind
 
 - script tags are not self closing -> `<script></script>`
 - if you use a script tag with a source attribute, then you cannot run JavaScript code inside that script
