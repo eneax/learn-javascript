@@ -49,3 +49,11 @@ const numberType = 1;
 const stringType = '1';
 
 console.log(numberType + stringType); // "11" string
+
+/* 
+  * The 'plus' sign
+The 'plus' sign in JS can be used with:
+- numbers to add
+- strings to concatenate
+- both numbers and string and this is where it's easy to make mistakes
+*/
