@@ -14,7 +14,7 @@ Primitive types: all the above with the exception of objects (special type).
 
 ## String
 
-We talk about strings, anytime there is a text wrapped into single quotes (''), double quotes ("") and backticks (``).
+We talk about strings, anytime there is a text wrapped into single quotes (`''`), double quotes (`""`) and backticks (``).
 Basically strings are used to hold text.
 
 ## Numbers
@@ -24,7 +24,7 @@ It includes numbers that have or do not have decimal in them.
 
 ## Object
 
-Everything in JavaScript is an object
+Everything in JavaScript is an object.
 
 ## Boolean
 
@@ -32,7 +32,7 @@ A value that can be true or false.
 
 ## Null and Undefined
 
-Both of these types are used to set a value to nothing.
+Both of these types are used to set a value to `nothing`.
 
 ## Symbol
 
