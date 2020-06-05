@@ -7,13 +7,13 @@ const name = 'enea'
 console.log(`My name is ${name} and I'm ${age} years old`)
 ```
 
-## typeOf
+## typeof
 
-The keyword `typeOf` allows you to check what is the 'type of' the value you have to deal with.
+The keyword `typeof` allows you to check what is the 'type of' the value you have to deal with.
 
 ```js
-typeOf age // "number"
-typeOf name // "string"
+typeof age // "number"
+typeof name // "string"
 ```
 
 ## Integer vs Floats
@@ -89,8 +89,8 @@ They just represent a value higher than a computer can possibly calculate.
 1000 ** 20 // 1e+60
 1000 ** 200 // Infinity
 
-typeOf Infinity // "number"
-typeOf -Infinity // "number"
+typeof Infinity // "number"
+typeof -Infinity // "number"
 ```
 
 ## NaN
@@ -100,5 +100,5 @@ typeOf -Infinity // "number"
 ```js
 17 / 'dog' // NaN
 
-typeOf NaN // "number"
+typeof NaN // "number"
 ```
