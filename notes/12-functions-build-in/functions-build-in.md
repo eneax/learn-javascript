@@ -44,3 +44,32 @@ parseInt('10.4987') // 10
 ```js
 Date.now()
 ```
+
+## Functions that work with the DOM
+
+These are functions that allow us to manipulate the DOM:
+
+- `document.querySelector` takes a selector and finds any DOM element that matches that selector
+
+```js
+const p = document.querySelector('p')
+console.log(p)
+```
+
+In the example above, we are selecting all the paragraph tags in the page.
+
+- `scrollTo(x-coord, y-coord)` takes two coordinates and scrolls the page accordingly
+
+```js
+window.scroll(0, 200)
+```
+
+or, using options:
+
+```js
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth',
+})
+```
