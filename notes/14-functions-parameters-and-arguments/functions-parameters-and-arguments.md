@@ -85,3 +85,20 @@ function sayHiTo(firstName) {
 sayHiTo('Enea') // "Hello Enea"
 sayHiTo() // "Hello undefined" --> because we have a `firstName` variable which was not set to any value
 ```
+
+## Passing an expression as an argument
+
+```js
+function calculateBill(billAmount, taxRate) {
+  console.log('Running Calculate Bill!!!')
+
+  const total = billAmount * (1 + taxRate)
+  return total
+}
+
+const wesBill = 50
+const kaitBill = 100
+
+const myTotal = calculateBill(wes + kait, 0.2)
+console.log(myTotal)
+```
