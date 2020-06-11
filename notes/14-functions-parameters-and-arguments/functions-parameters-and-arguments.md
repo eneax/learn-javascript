@@ -39,3 +39,49 @@ console.log(myTotal, myTotal2)
 When you run (or call or invoke) your function, you pass in the data that will take the place of the parameters.
 In the example above, `100` replaces `billAmount` and `0.13` takes the place of `taxRate`.
 The values `100` and `0.13` are called `arguments` and they represent the actual values that we pass in a function.
+
+## Passing variables to a function
+
+In the previous example we saw how we can pass numbers (`100` and `0.13`) into a function.
+However, it's a common approach to pass variables inside functions, instead of just numbers.
+
+Example:
+
+```js
+function calculateBill(billAmount, taxRate) {
+  console.log(billAmount, taxRate)
+  console.log('Running Calculate Bill!!!')
+
+  const total = billAmount * (1 + taxRate)
+  return total
+}
+
+const wesTotal = 500
+const wesTaxRate = 0.3
+
+const myTotal = calculateBill(wesTotal, wesTaxRate)
+console.log(myTotal)
+```
+
+When you run a function in JavaScript, it takes what you passed in, no matter if it's a `number`, a `string` or a `reference` to a variable which internally holds the value:
+
+```js
+const myTotal = calculateBill(wesTotal, wesTaxRate)
+```
+
+Then, when values get passed into a function, they get renamed into what you used as function parameters:
+
+```js
+function calculateBill(billAmount, taxRate) {}
+```
+
+#### More Examples
+
+```js
+function sayHiTo(firstName) {
+  return `Hello ${firstName}`
+}
+
+sayHiTo('Enea') // "Hello Enea"
+sayHiTo() // "Hello undefined" --> because we have a `firstName` variable which was not set to any value
+```
