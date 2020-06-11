@@ -102,3 +102,25 @@ const kaitBill = 100
 const myTotal = calculateBill(wes + kait, 0.2)
 console.log(myTotal)
 ```
+
+## Passing a function
+
+We can pass the returned value of a function as arguments to other function:
+
+```js
+function doctorize(name) {
+  return `Dr. ${name}`
+}
+
+function yell(name) {
+  return `HEY ${name.toUpperCase()}`
+}
+
+yell(doctorize('enea')) // "HEY DR. ENEA"
+```
+
+Let's break this down:
+
+1. `doctorize('enea')` is being executed first and it returns `"Dr. enea"`
+
+2. the result of `doctorize('enea')` is passed into the `yell` function, which will take `'enea'` as name variable and set it to uppercase, before adding `Hey`
