@@ -124,3 +124,27 @@ Let's break this down:
 1. `doctorize('enea')` is being executed first and it returns `"Dr. enea"`
 
 2. the result of `doctorize('enea')` is passed into the `yell` function, which will take `'enea'` as name variable and set it to uppercase, before adding `Hey`
+
+## Default values
+
+When you define a function, inside your function definition, you can set a default value; so if you call the function and don't pass any value to it, it will fallback to this default value.
+
+```js
+function calculateBill(billAmount, taxRate = 0.2, tipRate = 0.15) {
+  console.log('Running Calculate Bill!!!')
+
+  const total = billAmount + billAmount * taxRate + billAmount * tipRate
+  return total
+}
+
+calculateBill(100) // 135
+```
+
+In the example above, we can see that we called the `calculateBill()` function, by passing in only the `billAmount`, and it still works.
+This happens because the `taxRate` value falls back to `0.2` and `tipRate` falls back to `0.15`.
+
+However, if we want to pass a `billAmount` and a `tipRate` and fall back to the default `taxRate`, we need to pass `undefined`:
+
+```js
+calculateBill(100, undefined, 0.3) // 150
+```
