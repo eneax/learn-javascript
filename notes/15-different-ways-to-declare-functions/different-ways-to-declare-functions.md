@@ -29,3 +29,17 @@ function(firstname) {
   return `Dr. ${firstname}`
 }
 ```
+
+3. Function Expression
+
+This is the case when you store a function as a value in a variable.
+
+```js
+const doctorize = function(firstname) {
+  return `Dr. ${firstname}`
+}
+
+doctorize('Enea') // "Dr. Enea"
+```
+
+Keep in mind that function expressions are not `hoisted`.
