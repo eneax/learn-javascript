@@ -19,3 +19,13 @@ function doctorize(firstname) {
 
 Keep in mind that functions, which are declared with the `function` keyword, are `hoisted`.
 That's why, we're able to call a function before it's initialized.
+
+2. Anonymous function
+
+A function without a name is called anonymous function.
+
+```js
+function(firstname) {
+  return `Dr. ${firstname}`
+}
+```
