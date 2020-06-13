@@ -43,3 +43,56 @@ doctorize('Enea') // "Dr. Enea"
 ```
 
 Keep in mind that function expressions are not `hoisted`.
+
+4. Arrow functions
+
+Arrow functions represent a new way to declare functions in JavaScript and have been added with ES6.
+They are anonymous functions and are created like function expressions.
+
+A nice feature of arrow functions is that they allow `implicit returns`. This means that we can return a value from a function, without having to write explicitly the `return` keyword.
+
+Example function for converting inches to centimeters:
+
+```js
+// Using the function keyword
+function inchToCM(inches) {
+  const cm = inches * 2.54
+  return cm
+}
+
+// Using arrow functions
+const inchToCM = (inches) => inches * 2.54
+```
+
+Example function for adding to numbers:
+
+```js
+// Using the function keyword
+function add(a, b = 3) {
+  const total = a + b
+  return total
+}
+
+// Using arrow functions
+const add = (a, b = 3) => a + b
+```
+
+Example of arrow function returning an object
+
+```js
+// Using the function keyword
+function makeABaby(first, last) {
+  const baby = {
+    name: `${first} ${last}`,
+    age: 0,
+  }
+
+  return baby
+}
+
+// Using arrow functions
+const makeABaby = (first, last) => ({
+  name: `${first} ${last}`,
+  age: 0,
+})
+```
