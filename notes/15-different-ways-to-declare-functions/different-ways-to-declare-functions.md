@@ -96,3 +96,13 @@ const makeABaby = (first, last) => ({
   age: 0,
 })
 ```
+
+5. IIFE - Immediately Invoked Function Expression
+
+<!-- prettier-ignore -->
+```js
+(function(age) {
+  console.log('Running....')
+  return `You are cool and ${age}`
+})(100)
+```
