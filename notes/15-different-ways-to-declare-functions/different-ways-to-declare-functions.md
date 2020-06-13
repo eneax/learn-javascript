@@ -133,3 +133,59 @@ const enea = {
 ```
 
 As we can see from the example above, `enea` is an object and `sayHi()` is a function inside an object, so it's basically a `method`.
+
+7. Callback functions
+
+A callback function is like a regular function, but we use it to run code after something has happened.
+
+The two main cases when we use callback functions are:
+
+- `click callback` -> when somebody clicked something, then run this code
+
+Example:
+
+```html
+<button>Click Me!</button>
+```
+
+```js
+function handleClick() {
+  console.log('Clicked!!!')
+}
+
+const button = document.querySelector('button')
+
+// Referencing a function defined outside the event listener
+button.addEventListener('click', handleClick)
+
+// Declaring an anonymous function inside the event listener
+button.addEventListener('click', function() {
+  console.log('Nice job!!')
+})
+```
+
+Notice that we don't run the function immediately on the `.addEventListener`. It runs only is the user clicks the button in our page.
+
+- `timer callback` -> when this amount of time has passed, then run this code
+
+In order to create a `timer callback`, we use a `setTimeout()` function. It takes two things: the function to call after a certain amount of time and the actual duration in milliseconds.
+
+Example:
+
+```js
+function sayHi() {
+  console.log('Hiiiiii!!!')
+}
+
+setTimeout(sayHi, 1000)
+
+// Using an anonymous function
+setTimeout(function() {
+  console.log('DONE!!!')
+}, 2500)
+
+// Using an arrow function
+setTimeout(() => {
+  console.log('DONE!!!')
+}, 2500)
+```
