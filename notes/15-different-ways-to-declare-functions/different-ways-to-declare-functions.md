@@ -106,3 +106,30 @@ const makeABaby = (first, last) => ({
   return `You are cool and ${age}`
 })(100)
 ```
+
+6. Methods
+
+A method is a function that lives inside of an object.
+If we take `console.log()`, we can see that `console` is an object and `log()` is a function that lives inside the `console` object.
+
+Example:
+
+```js
+const enea = {
+  name: 'Enea',
+  // Method
+  sayHi: function() {
+    return 'Hi there!!!!'
+  },
+  // Short hand method
+  yellHi() {
+    return 'HEYYYYYYYY'
+  },
+  // Arrow function
+  wisperHi: () => {
+    return 'hey...'
+  },
+}
+```
+
+As we can see from the example above, `enea` is an object and `sayHi()` is a function inside an object, so it's basically a `method`.
