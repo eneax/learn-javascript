@@ -56,3 +56,34 @@ people.forEach((person, index) => {
   console.groupEnd(`${person.name}`)
 })
 ```
+
+## Callstack (or Stack Trace)
+
+It basically tells you which function was called by what other function.
+
+```js
+function doctorize(name) {
+  return `Dr. ${name}`
+}
+
+function greet(name) {
+  doesntExist() // This will cause an error
+  return `Hello ${name}`
+}
+
+function go() {
+  const name = doctorize(greet('Wes'))
+  console.log(name)
+}
+```
+
+If you run the code block above, you'll see an error on the console specifying:
+
+```
+Uncaught ReferenceError: doesntExist is not defined
+  at greet (...specific line of code in your JS file...)
+  at go (...specific line of code in your JS file...)
+  at <anonymous>:1:1
+```
+
+Here, `at <anonymous>:1:1` means that I run the `go()` function from the console.
