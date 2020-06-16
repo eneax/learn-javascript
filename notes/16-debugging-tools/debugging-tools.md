@@ -116,3 +116,22 @@ people.forEach((person, index) => {
   console.log(person.name) // you will not see this unless you remove the 'debugger' (i.e. breakpoint)
 })
 ```
+
+## Network requests
+
+Open your `Developer Tools` and on the `Network` tab, refresh the page. You'll see all the different files that are needed for your app the work.
+This allows us to check every time a website is making external requests for data.
+For instance, if you try to run the function below on your console, you will see on your `Network` tab the request that was made, a preview of the result, the final response and the timing for all of this to happen.
+
+```js
+async function fetchDadJoke() {
+  const res = await fetch('https://icanhazdadjoke.com/', {
+    headers: {
+      Accept: 'text/plain',
+    },
+  })
+  const joke = await res.text()
+  console.log(joke)
+  return joke
+}
+```
