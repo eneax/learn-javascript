@@ -87,3 +87,15 @@ Uncaught ReferenceError: doesntExist is not defined
 ```
 
 Here, `at <anonymous>:1:1` means that I run the `go()` function from the console.
+
+## Grabbing of elements
+
+We can select any element on a web page and inspect it either on the `Elements` tab or in the `Console`.
+
+`$0` -> it'll return on the console whatever element you have selected on the `Elements` tab (0 means the last clicked element)
+
+`$1` -> it's the second last element you clicked
+
+`$('')` -> it selects the first element of a certain type, like the first paragraph (i.e. `$('p')`)
+
+`$$('')` -> it selects all the elements of a certain type, like all the paragraph (i.e. `$$('p')`)
