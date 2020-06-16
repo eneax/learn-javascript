@@ -135,3 +135,10 @@ async function fetchDadJoke() {
   return joke
 }
 ```
+
+## Break On Attribute
+
+This is another way of adding a breakpoint. You can inspect an element and then click on `Break on`.
+It's very helpful, if you've to deal with a new codebase and have no idea where some functions or changes on the DOM are originated from.
+
+We can set breakpoints also from the `Sources` tab. For instace, when you click somewhere on the page of every time an `XHR` request is made.
