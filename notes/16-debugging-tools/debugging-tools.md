@@ -99,3 +99,20 @@ We can select any element on a web page and inspect it either on the `Elements` 
 `$('')` -> it selects the first element of a certain type, like the first paragraph (i.e. `$('p')`)
 
 `$$('')` -> it selects all the elements of a certain type, like all the paragraph (i.e. `$$('p')`)
+
+## Breakpoint
+
+Using the `debugger` keyword and opening the `Developer Tools`, we can stop JavaScript from running and peer into the code at that very moment.
+
+```js
+const people = [
+  { name: 'Wes', cool: true, country: 'Canada' },
+  { name: 'Scott', cool: true, country: 'Merica' },
+  { name: 'Snickers', cool: false, country: 'Dog Country' },
+]
+
+people.forEach((person, index) => {
+  debugger
+  console.log(person.name) // you will not see this unless you remove the 'debugger' (i.e. breakpoint)
+})
+```
