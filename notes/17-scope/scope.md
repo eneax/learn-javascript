@@ -56,3 +56,27 @@ window.sayHi() // "Hi"
 As we can see, only functions and variables declared with `var` are attached to the window, even though all of them (`const`, `let`, `var`) are declared in the global scope.
 
 Note: never declare variables with a global scope!
+
+## Function Scope
+
+When variables are created inside of a function, those variables are only available inside of that function.
+
+```js
+const age = 100
+
+function go() {
+  const name = 'enea'
+}
+
+console.log(age) // 100
+console.log(name) // Uncaught ReferenceError: name is not defined
+```
+
+If we want to access the value of `name`:
+
+```js
+function go() {
+  const name = 'enea'
+  console.log(name)
+}
+```
