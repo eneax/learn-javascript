@@ -80,3 +80,49 @@ function go() {
   console.log(name)
 }
 ```
+
+### Scope lookup
+
+An interesting feature of most programming languages is that, if a variable is not found inside of a function, we go one level higher in the scope and look for the variable in that scope.
+
+```js
+const age = 100
+
+function go() {
+  const name = 'enea'
+  console.log(age) // 100
+  console.log(name) // "enea"
+}
+```
+
+As we can see in the example above, the `console.log(age)` statement cannot find the `age` variable inside the `go()` function and so it goes one level higher, into the `global scope`, to find it.
+
+However, if we create another `age` variable inside the `go()` function, the result will be different:
+
+```js
+const age = 100
+
+function go() {
+  const age = 200
+  const name = 'enea'
+  console.log(age) // 200
+  console.log(name) // "enea"
+}
+```
+
+This practice, of using the same variable name (`age`) for two different variables is called `shadow`.
+Our `age` variable with value `200` is overshadowing the other `age` variable with value `100`.
+Basically, we have no way to access the value `100` from inside the `go()` function.
+A better solution to avoid this conflict is to use better names:
+
+```js
+const age = 100
+
+function go() {
+  const myAge = 200
+  const name = 'enea'
+  console.log(age) // 100
+  console.log(myAge) // 200
+  console.log(name) // "enea"
+}
+```
