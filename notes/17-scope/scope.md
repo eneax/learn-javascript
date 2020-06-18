@@ -126,3 +126,50 @@ function go() {
   console.log(name) // "enea"
 }
 ```
+
+## Block Scope
+
+A block refers to a set of curly brackets `{}`. A variable that is created inside a block `{}` is not accessible from outside.
+
+Example:
+
+```js
+if (1 === 1) {
+  var first = 'first'
+  const second = 'second'
+  let third = 'third'
+}
+
+console.log(first) // "first"
+console.log(second) // Uncaught ReferenceError: second is not defined
+console.log(third) // Uncaught ReferenceError: third is not defined
+```
+
+If you need to access the variable from outside the block scope, you can declare it outside the `{}` and reassign it inside the block:
+
+```js
+let second
+
+if (1 === 1) {
+  second = 'second'
+}
+
+console.log(second) // "second"
+```
+
+Another example, avoiding the creation of a variable in the global scope:
+
+```js
+function isCool(name) {
+  let cool
+
+  if (name === 'enea') {
+    cool = true
+  }
+
+  console.log(cool) // true
+  return cool
+}
+```
+
+Note: variables declared with `var` are function scoped, while variables declared with `const` and `let` are block scoped.
