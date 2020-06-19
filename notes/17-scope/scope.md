@@ -192,3 +192,20 @@ function go() {
 
 go() // rex
 ```
+
+Example 2:
+
+```js
+const dog = 'rex'
+
+function logDog(dog) {
+  console.log(dog)
+}
+
+function go() {
+  const dog = 'lessie'
+  logDog('max')
+}
+
+go() // max
+```
