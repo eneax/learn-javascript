@@ -229,3 +229,22 @@ go() // lessie
 
 JavaScript is a `lexically scoped language`!
 It means that scope lookup happens where the functions are defined and not where they are run.
+
+Example 4:
+
+```js
+function sayHi(name) {
+  function yell() {
+    console.log(name.toUpperCase())
+  }
+
+  yell()
+}
+
+sayHi('enea') // ENEA
+
+yell() // Uncaught ReferenceError: yell is not defined
+```
+
+Just like variables, functions are scoped to the parent function.
+That's why, if a function is created inside another function (parent), it'll be available only inside the parent function.
