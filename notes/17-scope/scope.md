@@ -209,3 +209,23 @@ function go() {
 
 go() // max
 ```
+
+Example 3:
+
+```js
+const dog = 'rex'
+
+function logDog(dog) {
+  console.log(dog)
+}
+
+function go() {
+  const dog = 'lessie'
+  logDog(dog)
+}
+
+go() // lessie
+```
+
+JavaScript is a `lexically scoped language`!
+It means that scope lookup happens where the functions are defined and not where they are run.
