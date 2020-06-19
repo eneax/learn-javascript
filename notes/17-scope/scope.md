@@ -173,3 +173,22 @@ function isCool(name) {
 ```
 
 Note: variables declared with `var` are function scoped, while variables declared with `const` and `let` are block scoped.
+
+### Scope lookup
+
+Example 1:
+
+```js
+const dog = 'rex'
+
+function logDog() {
+  console.log(dog)
+}
+
+function go() {
+  const dog = 'lessie'
+  logDog()
+}
+
+go() // rex
+```
