@@ -29,3 +29,25 @@ However, there are other developers who prefer to structure their JavaScript fil
 
 - What does the file do? -> here is where you put all your function calls
 - How does this file do it? -> here is where all the functions are declared
+
+## Variable hoisting
+
+When dealing with variables, JavaScript will hoist the variable declaration, but not the actual value.
+
+Example:
+
+```js
+console.log(cool) // Uncaught ReferenceError: cool is not defined
+console.log(age) // undefined
+var age = 10
+```
+
+and what JavaScript does here is:
+
+```js
+var age
+console.log(age)
+age = 10
+```
+
+That's why, we get `undefined` in the console.
