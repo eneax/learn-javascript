@@ -22,3 +22,21 @@ innerFn()
 // 'Hey, I am the outer Var!'
 // 'Hey, I am the inner Var!'
 ```
+
+Example 2
+
+```js
+function createGreeting(greeting = '') {
+  const greet = greeting.toUpperCase()
+
+  return function(name) {
+    return `${greet} ${name}`
+  }
+}
+
+const sayHello = createGreeting('hello')
+const sayHey = createGreeting('hey')
+
+console.log(sayHello('enea')) // HELLO enea
+console.log(sayHey('enea')) // HEY enea
+```
