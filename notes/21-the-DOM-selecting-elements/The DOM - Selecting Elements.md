@@ -17,3 +17,15 @@ console.log(p)
 ```
 
 The example above will select and log on the console the first paragraph of the page.
+
+## querySelectorAll
+
+`querySelectorAll` will give you multiple elements that match the query:
+
+```js
+const divs = document.querySelector('div')
+console.log(divs)
+```
+
+The example above will give us all the `div`'s present on the DOM.
+The output logged on the console will be a `NodeList`. It looks a lot like an array, but it's a list of things which does not have all the methods that are available to us with `arrays`.
