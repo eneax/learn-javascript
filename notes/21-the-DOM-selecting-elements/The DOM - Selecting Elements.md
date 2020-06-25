@@ -61,3 +61,22 @@ const item2Img = item2.querySelector('img')
 console.log(item2)
 console.log(item2Img)
 ```
+
+## Extra
+
+To be able to select elements on the DOM, we need to import a JavaScript file first.
+We've to be very careful and import the <script></script> tag before the closing body tag (</body>), instead of importing it in the <head></head>.
+
+The reason behind this behavior is that, if we load JavaScript before there is any content on the page, we won't be able to interact with it.
+However, if the script is imported before the closing body tag, it ensures that all the HTML has been downloaded and parsed to the page, before the JavaScript file is downloaded.
+
+If you have to import your JavaScript file in the header, you can run an `init()` function that delays the JavaScript code until all the DOM content has been loaded to the page.
+
+```js
+function init() {
+  const p = document.querySelector('p')
+  console.log(p)
+}
+
+document.addEventListener('DOMContentLoaded', init)
+```
