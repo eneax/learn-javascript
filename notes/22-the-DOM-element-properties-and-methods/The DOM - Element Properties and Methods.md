@@ -123,3 +123,28 @@ I'm a heading
 <span>I'm hidden</span>
 */
 ```
+
+### outerHTML
+
+Example:
+
+```html
+<body>
+  <h2>
+    I'm a heading
+    <span>I'm hidden</span>
+  </h2>
+</body>
+```
+
+```js
+const heading = document.querySelector('h2')
+
+console.log(heading)
+/*
+<h2>
+  I'm a heading
+  <span>I'm hidden</span>
+</h2>
+*/
+```
