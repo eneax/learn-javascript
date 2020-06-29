@@ -148,3 +148,38 @@ console.log(heading)
 </h2>
 */
 ```
+
+### insertAdjacentText
+
+The `insertAdjacentText` method takes two parameters: position and text that you want to pass in.
+
+Example:
+
+```html
+<body>
+  <article>
+    <h2>Just a heading</h2>
+    <p class="pizza">I really really love pizza</p>
+  </article>
+</body>
+```
+
+```js
+const pizzaList = document.querySelector('.pizza')
+console.log(pizzaList.textContent) // I really really love pizza
+
+pizzaList.insertAdjacentText('beforeend', '🍕')
+console.log(pizzaList.textContent) // I really really love pizza 🍕
+
+pizzaList.insertAdjacentText('beforebegin', '🍕')
+console.log(pizzaList.textContent)
+/*
+🍕
+I really really love pizza
+*/
+
+pizzaList.insertAdjacentText('afterbegin', '🍕')
+console.log(pizzaList.textContent) // 🍕 I really really love pizza
+```
+
+Note: Everything is a `node`, but it can become `element` if it gets wrapped into a tag.
