@@ -100,3 +100,26 @@ console.log(heading.textContent)
 
 console.log(heading.innerText) // I'm a heading
 ```
+
+### innerHTML
+
+Example:
+
+```html
+<body>
+  <h2>
+    I'm a heading
+    <span>I'm hidden</span>
+  </h2>
+</body>
+```
+
+```js
+const heading = document.querySelector('h2')
+
+console.log(heading)
+/*
+I'm a heading
+<span>I'm hidden</span>
+*/
+```
