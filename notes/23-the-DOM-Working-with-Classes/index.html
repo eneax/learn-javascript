@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>23 - The DOM</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <style>
+    img {
+      transition: all .2s;
+    }
+
+    img:hover {
+      cursor: pointer;
+    }
+
+    .round {
+      border-radius: 50%;
+      transform: rotate(1turn) scale(1.5);
+      box-shadow: 0 0 10px black;
+    }
+  </style>
+
+  <div class="items">
+    <p>Hi I'm a item</p>
+
+    <img class="nice cool" src="https://picsum.photos/600" alt="random img" />
+
+    <div>
+      <h2>Sub Div</h2>
+      <p>Hi I'm a item</p>
+    </div>
+
+    <div class="item">
+      <img src="https://source.unsplash.com/random/300x300" />
+    </div>
+
+    <p>Hi I'm a item</p>
+    <p>Hi I'm a item</p>
+
+    <article class="item">
+      <h2>I'm an article</h2>
+      <p class="pizza">This is how many pizzas I ate! 🍕</p>
+    </article>
+  </div>
+
+  <script src="./the-dom.js"></script>
+</body>
+
+</html>
