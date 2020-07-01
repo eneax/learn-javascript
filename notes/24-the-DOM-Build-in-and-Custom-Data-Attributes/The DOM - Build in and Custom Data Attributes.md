@@ -26,3 +26,21 @@ pic.addEventListener('load', function() {
 pic.setAttribute('alt', 'JUST a RANDOM pic')
 console.log(pic.getAttribute('alt'))
 ```
+
+## Custom Data Attributes
+
+If you want to create custom attributes, you should not go and created them with `setAttribute`.
+The standard way is to use `data attributes`.
+Anytime you want to add metadata to an element, like an image, you can add `data-` and `name-of-custom-attribute`:
+
+```html
+<img data-name="eneax" src="https://source.unsplash.com/random/300x300" />
+```
+
+If you want to access the custom data attributes, you need to use `.dataset`.
+It'll return an object with all the property values that we have :
+
+```js
+const custom = document.querySelector('.custom')
+console.log(custom.dataset) // DOMStringMap {name: "eneax"}
+```
