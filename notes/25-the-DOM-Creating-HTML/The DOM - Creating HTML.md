@@ -36,3 +36,7 @@ document.body.appendChild(myDiv)
 Here, it's important to append the element to the body at the end.
 In fact, every time that you use `appendChild`, we're modifying the DOM and that causes in the browser a reflow.
 It means that the browser notices that there is something new on the page (i.e. text change or new added elements) and it needs to repaint what is actually shown on the page.
+
+### ParentNode.append()
+
+This method works in a similar way to the `appendChild`, but currently does not support IE.
