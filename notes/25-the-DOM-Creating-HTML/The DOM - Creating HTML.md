@@ -54,3 +54,17 @@ heading.textContent = 'Cool things'
 
 myDiv.insertAdjacentElement('afterbegin', heading)
 ```
+
+### cloneNode
+
+It returns a duplicate of the node on which this method was called.
+
+```js
+const liFive = document.createElement('li')
+liFive.textContent = 'Five'
+list.append(liFive)
+
+const liOne = liFive.cloneNode(true)
+liOne.textContent = 'One'
+list.insertAdjacentElement('afterbegin', liOne)
+```
