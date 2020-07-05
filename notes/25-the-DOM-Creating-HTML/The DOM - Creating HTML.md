@@ -40,3 +40,17 @@ It means that the browser notices that there is something new on the page (i.e. 
 ### ParentNode.append()
 
 This method works in a similar way to the `appendChild`, but currently does not support IE.
+
+### insertAdjacentElement
+
+`insertAdjacentElement` takes two arguments: the position and the actual element to add.
+
+Example:
+
+```js
+// If we need to put something on top of 'myDiv'
+const heading = document.createElement('h2')
+heading.textContent = 'Cool things'
+
+myDiv.insertAdjacentElement('afterbegin', heading)
+```
