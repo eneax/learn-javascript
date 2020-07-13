@@ -71,3 +71,22 @@ Then, we append the newly created element to the DOM:
 ```js
 document.body.appendChild(myFragment)
 ```
+
+2. Security issues
+
+One potential pitfall is that somebody can add HTML inside a string that we did not plan to have.
+
+For instance, we can take the `myDesc` variable from above:
+
+```js
+const myDesc = `random pic <h1>NOT COOL</h1><style>* { display: none; }</style>`
+```
+
+The situation can get worse when we talk about cross-site scripting (XSS).
+In this case, someone can add also `script` tags inside the HTML string and run malicious code from there (i.e. drain bank accounts).
+
+```js
+const myDesc = `random pic <img onload="alert('HACKED')" src='https://picsum.photos/50' />`
+```
+
+Basically, the only JS code that should run on your page is JavaScript that has been authored by you or by approved parties (like scripts needed for the website to function)!
