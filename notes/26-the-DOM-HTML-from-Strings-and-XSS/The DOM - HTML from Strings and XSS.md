@@ -34,3 +34,40 @@ const myHTML = `
 item.innerHTML = myHTML
 console.log(item.innerHTML)
 ```
+
+## Downsides of this approach
+
+1. Not an element
+
+The first downside is that `myHTML`, from the example above, is not an `element`.
+
+Example:
+
+```js
+console.log(typeof myHTML) // string
+```
+
+Since it's not an `element`, we don't have access to methods like `classList`:
+
+```js
+console.log(myHTML.classList) // undefined
+```
+
+In order to become an element, we've to dump it first inside an `innerHTML`.
+
+### How can we fix the 'Not an element' downside?
+
+First, we need to turn a string into a DOM element:
+
+```js
+const myFragment = document.createRange().createContextualFragment(myHTML)
+console.log(myFragment) // #document-fragment
+```
+
+A `Range` is a collection of elements or part of HTML that we can work with.
+
+Then, we append the newly created element to the DOM:
+
+```js
+document.body.appendChild(myFragment)
+```
