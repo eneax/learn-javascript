@@ -57,3 +57,26 @@ btns.removeEventListener('click', handleClick)
 ```
 
 For the `removeEventListener` to work, we need to pass it a named function, instead of an anonymous function which cannot be removed.
+
+## Listening for events on multiple items
+
+In order to listen for events on multiple items, we need to select all the items first.
+We can do this by using `querySelectorAll`:
+
+```js
+const buyButtons = document.querySelectorAll('.buy')
+```
+
+An important thing to remember about `querySelectorAll` is that it returns `NodeList`.
+This means that we cannot use `addEventListener` directly. First, we need to loop over the list of elements using `forEach`:
+
+```js
+function buyItem() {
+  console.log('Buying Item')
+}
+
+buyButtons.forEach((item) => item.addEventListener('click', buyItem))
+```
+
+As we can see in the example above, the `buyItem` function will run for as many times as the number of `buyButton` contained in the `NodeList`.
+Just like we added an event listener to every item inside a `NodeList`, we can remove it using the same process.
