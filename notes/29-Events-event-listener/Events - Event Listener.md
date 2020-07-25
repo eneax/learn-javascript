@@ -43,3 +43,17 @@ Note here that we don't call the function like `handleClick()`.
 We just reference it and then, the browser will take care of when it should be executed.
 By referencing the `handleClick` function inside the `addEventListener`, we're `binding` that function to the element.
 Binding means that we're taking a function and listening for a specific event (i.e. click) against an element.
+
+## removeEventListener
+
+removeEventListener works in a similar way to the addEventListener.
+Ee need to specify:
+
+1. the event that we want to stop listening for
+2. the function that we don't want to be executed anymore (the function is not bound anymore to the element)
+
+```js
+btns.removeEventListener('click', handleClick)
+```
+
+For the `removeEventListener` to work, we need to pass it a named function, instead of an anonymous function which cannot be removed.
