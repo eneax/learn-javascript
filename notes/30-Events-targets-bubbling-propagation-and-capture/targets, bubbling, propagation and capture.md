@@ -54,3 +54,18 @@ window.addEventListener('click', function() {
 ```
 
 Now, if I click on the button, the window event will not fire.
+
+### capture
+
+`capture` is the opposite of propagation and instead of bubbling up, the flow goes from the window to the element that we actually click:
+
+```js
+window.addEventListener(
+  'click',
+  function(event) {
+    console.log('You clicked the window')
+    console.log(event.target)
+  },
+  { capture: true }
+)
+```
