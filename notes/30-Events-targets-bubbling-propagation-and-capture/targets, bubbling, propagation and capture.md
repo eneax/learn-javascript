@@ -88,3 +88,19 @@ photoTwo.addEventListener('mouseenter', function(e) {
   console.log(e.currentTarget)
 })
 ```
+
+### this
+
+`this` is a reserved keyword in JavaScript.
+It's going to be equal to whatever is to the left of the `dot`.
+
+```js
+const photoTwo = document.querySelector('.photoTwo')
+photoTwo.addEventListener('mouseenter', function(e) {
+  console.count('mouseenter', e.currentTarget)
+  console.log(e.currentTarget)
+  console.log(this)
+})
+```
+
+In the example above, to the left of the `dot` is `photoTwo`, so in this case `this` will be equal to `e.currentTarget`.
