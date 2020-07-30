@@ -78,3 +78,13 @@ photoOne.addEventListener('mousemove', function(e) {
   console.count('mousemove', e.currentTarget)
 })
 ```
+
+### mouseenter
+
+```js
+const photoTwo = document.querySelector('.photoTwo')
+photoTwo.addEventListener('mouseenter', function(e) {
+  console.count('mouseenter', e.currentTarget)
+  console.log(e.currentTarget)
+})
+```
