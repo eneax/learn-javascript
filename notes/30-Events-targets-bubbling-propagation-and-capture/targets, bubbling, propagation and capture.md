@@ -69,3 +69,12 @@ window.addEventListener(
   { capture: true }
 )
 ```
+
+### mousemove
+
+```js
+const photoOne = document.querySelector('.photoOne')
+photoOne.addEventListener('mousemove', function(e) {
+  console.count('mousemove', e.currentTarget)
+})
+```
