@@ -24,3 +24,21 @@ enea.addEventListener('click', function(e) {
 ```
 
 Now, if you try to click on the link, nothing will happen!
+
+### Prevent Default on forms
+
+Another common scenario, where we might want to prevent a default behavior, is in forms:
+
+```js
+const signupForm = document.querySelector('[name="signup"]')
+signupForm.addEventListener('submit', function(event) {
+  const agreed = event.currentTarget.agree.checked
+
+  if (!agreed) {
+    alert('You must agree to the terms and conditions!!!')
+    event.preventDefault()
+  }
+})
+```
+
+Here, we're preventing a user from submitting a form when the `agree` checkbox has not been clicked.
