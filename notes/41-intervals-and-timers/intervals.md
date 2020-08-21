@@ -49,3 +49,23 @@ function setImmediateInterval(funcToRun, ms) {
 
 setImmediateInterval(buzzer, 2000)
 ```
+
+## Clear timer or interval
+
+If you want to clear a timer or an interval, you must save the reference to that timer or interval in a variable:
+
+```js
+function destroy() {
+  document.body.innerHTML = `<p>DESTROYED</p>`
+}
+
+// Save the reference to the timer or interval
+const bombTimer = setTimeout(destroy, 5000)
+
+window.addEventListener('click', function() {
+  console.log('You clicked! You saved the world')
+
+  // STOP THE TIMER FROM RUNNING
+  clearTimeout(bombTimer)
+})
+```
