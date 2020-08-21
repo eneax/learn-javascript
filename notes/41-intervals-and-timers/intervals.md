@@ -24,3 +24,28 @@ Here, JavaScript will log `Starting`, then set the timer and log `finishing`.
 After 500ms, the `bzzzzz` will be logged on the console.
 
 This is the asynchronous nature of JavaScript. Even if we've set a timer, the rest of the JS code will keep running, instead of waiting for the timer to be done.
+
+## setInterval
+
+`setInterval` takes a callback function and how often would you like to run it.
+
+```js
+setInterval(buzzer, 2000)
+```
+
+Here, I want to run the `buzzer` function every `2 seconds`.
+One thing to keep in mind with `setInterval` is that it'll run for the first time after `2 seconds`.
+There is no way to make it run immediately the first time and then based on the specified interval.
+
+If we want this functionality, we've to code it ourselves:
+
+```js
+function setImmediateInterval(funcToRun, ms) {
+  // right away call that function
+  funcToRun()
+  // run a regular interval
+  return setInterval(funcToRun, ms)
+}
+
+setImmediateInterval(buzzer, 2000)
+```
