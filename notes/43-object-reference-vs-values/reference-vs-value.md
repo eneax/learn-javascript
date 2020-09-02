@@ -99,3 +99,29 @@ person3.first = 'Larry'
 
 person3.clothing.shirts = 100
 ```
+
+## Merge objects
+
+The `spread` operator, that we used previously to copy an object, can be used also to merge objects together.
+
+```js
+const meatInventory = {
+  bacon: 2,
+  sausage: 3,
+  oyster: 10,
+}
+
+const veggieInventory = {
+  lettuce: 5,
+  tomatoes: 3,
+  oyster: 15,
+}
+
+const inventory = {
+  ...meatInventory,
+  ...veggieInventory,
+  apples: 2,
+}
+```
+
+Note: the order in which you spread objects matter. In fact, the latest value will prevail over the newest one.
