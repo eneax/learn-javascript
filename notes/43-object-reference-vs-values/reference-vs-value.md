@@ -70,3 +70,32 @@ console.log(inventory) // const inventory = { apples: 9, tomatoes: 1000 }
 ```
 
 This means that if you pass in an object to a function and you modify that object, the external object will also be updated.
+
+## How to copy an object?
+
+1. Object.assign
+
+```js
+const person3 = Object.assign({}, person1)
+```
+
+2. spread
+
+It takes every single item in an object and copies that into a new object:
+
+```js
+const person3 = { ...person1 }
+person3.first = 'Larry'
+
+console.log(person3) // 'Larry'
+console.log(person1) // 'wes'
+```
+
+Note: `Object.assign` and the `spread` operator make a shallow copy of an object. It means that they will go only one level deep. If you need to do a deep level clone of an object, you can use an external library like `Lodash`.
+
+```js
+const person3 = _.cloneDeep(person1)
+person3.first = 'Larry'
+
+person3.clothing.shirts = 100
+```
