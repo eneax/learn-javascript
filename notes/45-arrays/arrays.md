@@ -43,3 +43,36 @@ const cars = ['Tesla', 'Ford', 'BMW']
 
 console.log(cars[cars.length - 1]) // 'BMW'
 ```
+
+## Mutability and Immutability
+
+- `Mutable methods` modify the original array:
+
+```js
+const numbers = [1, 2, 3, 4, 5]
+const numbersReversed = numbers.reverse()
+
+console.log(numbersReversed) // [ 5, 4, 3, 2, 1 ]
+console.log(numbers) // [ 5, 4, 3, 2, 1 ]
+```
+
+If you want to use a mutation method, but you don't want to mutate the original data,
+take a copy of the original data first:
+
+```js
+const numbers = [1, 2, 3, 4, 5]
+const numbersReversed = [...numbers].reverse()
+
+console.log(numbersReversed) // [ 5, 4, 3, 2, 1 ]
+console.log(numbers) // [1, 2, 3, 4, 5]
+```
+
+- `Immutable methods` don't modify the original array:
+
+```js
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const slicedNumbers = numbers.slice(2, 5)
+
+console.log(slicedNumbers) // [3, 4, 5]
+console.log(numbers) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
