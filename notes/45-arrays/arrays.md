@@ -89,3 +89,82 @@ console.log(numbers) // [1, 2, 3, 6, 7, 8, 9 ]
 ```
 
 It means start at `3` and remove `2` items (3rd is included).
+
+## Add items at the end of an array
+
+```js
+const names = ['ronaldo', 'messi', 'ibra']
+names.push('buffon')
+
+console.log(names) // ['ronaldo', 'messi', 'ibra', 'buffon']
+```
+
+if you don't want to modify the original array:
+
+```js
+const names = ['ronaldo', 'messi', 'ibra']
+const names2 = [...names, 'buffon']
+
+console.log(names2) // ['ronaldo', 'messi', 'ibra', 'buffon']
+console.log(names) // ['ronaldo', 'messi', 'ibra']
+```
+
+## Add items at the beginning of an array
+
+```js
+const names = ['ronaldo', 'messi', 'ibra']
+names.unshift('buffon')
+
+console.log(names) // ['buffon', 'ronaldo', 'messi', 'ibra']
+```
+
+if you don't want to modify the original array:
+
+```js
+const names = ['ronaldo', 'messi', 'ibra']
+const names2 = ['buffon', ...names]
+
+console.log(names2) // ['buffon', 'ronaldo', 'messi', 'ibra']
+console.log(names) // ['ronaldo', 'messi', 'ibra']
+```
+
+## Add items in the middle of an array
+
+```js
+const smartphones = ['pixel', 'samsung', 'iPhone']
+const newSmartphones = [
+  ...smartphones.slice(0, 2),
+  'Nokia',
+  ...smartphones.slice(2),
+]
+
+console.log(newSmartphones) // [ 'pixel', 'samsung', 'Nokia', 'iPhone' ]
+```
+
+## Remove items from middle of array
+
+Example 1:
+
+```js
+const smartphones = ['pixel', 'samsung', 'iPhone', 'Nokia']
+const newSmartphones = [...smartphones.slice(0, 2), ...smartphones.slice(3)]
+
+console.log(newSmartphones) // ['pixel', 'samsung', 'iPhone', 'Nokia']
+```
+
+Example 2:
+
+```js
+const smartphones = ['pixel', 'samsung', 'iPad', 'nokia', 'iPhone']
+
+const iPadIndex = smartphones.findIndex((smartphone) => smartphone === 'iPad')
+
+const newSmartphones = [
+  // get everything up to iPad index
+  ...smartphones.slice(0, iPadIndex),
+  // everything after iPad index
+  ...smartphones.slice(iPadIndex + 1),
+]
+
+console.log(newSmartphones) // [ 'pixel', 'samsung', 'nokia', 'iPhone' ]
+```
