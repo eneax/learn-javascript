@@ -76,3 +76,16 @@ const slicedNumbers = numbers.slice(2, 5)
 console.log(slicedNumbers) // [3, 4, 5]
 console.log(numbers) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
+
+## slice vs splice
+
+`slice` is immutable and it returns a new copy of an array.
+`splice` is mutable and it changes the content of an array by removing or replacing an element.
+
+```js
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(numbers.splice(3, 2)) // [4, 5]
+console.log(numbers) // [1, 2, 3, 6, 7, 8, 9 ]
+```
+
+It means start at `3` and remove `2` items (3rd is included).
